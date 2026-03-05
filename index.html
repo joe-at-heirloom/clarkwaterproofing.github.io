@@ -24,7 +24,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23d42027'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' fill='white'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&family=Instrument+Serif&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     /* ============================================
        RESET & BASE
@@ -1387,6 +1387,36 @@
     }
 
     /* ============================================
+       DEV BAR
+       ============================================ */
+    .dev-bar {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 14px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: var(--black);
+    }
+
+    .dev-bar-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      margin-right: 6px;
+    }
+
+    .dev-bar-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+
+    .dev-bar-name:hover {
+      color: var(--red-light);
+    }
+
+    /* ============================================
        RESPONSIVE
        ============================================ */
     @media (max-width: 1024px) {
@@ -2359,6 +2389,11 @@
       </div>
     </div>
   </footer>
+
+  <div class="dev-bar">
+    <span class="dev-bar-label">Brought to you by</span>
+    <a href="https://joelint.com" class="dev-bar-name">Joe Lint</a>
+  </div>
 
   <!-- ======================== SCRIPTS ======================== -->
   <script>
